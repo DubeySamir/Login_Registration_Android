@@ -72,7 +72,7 @@ public class RegistrationPage extends BaseClass {
                 email = editTextEmailAddress.getText().toString().trim();
                 password = editTextPassword.getText().toString().trim();
                 confirmPassword = editTextConfirmPassword.getText().toString().trim();
-
+//Use Regular Expression
                 if(fName.isEmpty() || lName.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Please fill all Details", Toast.LENGTH_SHORT).show();
                 }else {

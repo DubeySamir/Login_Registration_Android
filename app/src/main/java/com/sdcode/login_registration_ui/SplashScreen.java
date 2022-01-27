@@ -22,7 +22,7 @@ public class SplashScreen extends BaseClass {
             public void run() {
                 try {
                     sleep(500);
-                    if(idName != 0) {
+                    if(userId != 0) {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }else{
                         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
@@ -41,6 +41,7 @@ public class SplashScreen extends BaseClass {
     protected void initUi() {
         super.initUi();
     }
+
     @Override
     protected void initData() {
         super.initData();
