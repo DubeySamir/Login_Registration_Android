@@ -77,11 +77,9 @@ public class RegistrationPage extends BaseClass {
                 email = editTextEmailAddress.getText().toString().trim();
                 password = etPassword.getText().toString().trim();
                 confirmPassword = etConfirmPassword.getText().toString().trim();
-//Use Regular Expression
 
                 Pattern textPattern = Pattern.compile("^[a-zA-Z]+$");
                 Pattern phonePattern = Pattern.compile("^[0-9]{10}+$");
-//                Pattern emailPattern = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
                 Pattern emailPattern = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9]+.+[a-zA-Z]+$");
 //Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:
                 Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
@@ -122,7 +120,7 @@ public class RegistrationPage extends BaseClass {
                         boolean passwordMatches = passwordMatcher.matches();
 
                         if (!passwordMatches) {
-                            Toast.makeText(getApplicationContext(), "Password Error - Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Password Error - Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character!", Toast.LENGTH_SHORT).show();
                             return;
                         } else {
 
