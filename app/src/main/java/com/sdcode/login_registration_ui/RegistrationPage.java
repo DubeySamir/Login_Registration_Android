@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 
 public class RegistrationPage extends BaseClass {
 
-    TextInputLayout firstNameLayout, lastNameLayout, etPasswordLayout, etConfirmPasswordLayout;
+    TextInputLayout firstNameLayout, lastNameLayout;
     TextInputEditText firstNameEditText, lastNameEditText, etPassword, etConfirmPassword;
     AppCompatSpinner genderAppCompatSpinner;
     EditText editTextPhone, editTextEmailAddress;

@@ -7,8 +7,8 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.sdcode.login_registration_ui.fragments.AccountFragment;
-import com.sdcode.login_registration_ui.fragments.CartFragment;
-import com.sdcode.login_registration_ui.fragments.HomeFragment;
+import com.sdcode.login_registration_ui.fragments.MaleUsersFragment;
+import com.sdcode.login_registration_ui.fragments.FemaleUsersFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {
     public FragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
@@ -21,12 +21,12 @@ public class FragmentAdapter extends FragmentStateAdapter {
 
         switch (position){
             case 1:
-                return new CartFragment();
+                return new FemaleUsersFragment();
             case 2:
                 return new AccountFragment();
         }
 
-        return new HomeFragment();
+        return new MaleUsersFragment();
     }
 
     @Override

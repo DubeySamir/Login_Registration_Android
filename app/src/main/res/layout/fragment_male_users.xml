@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CartFragment">
+    tools:context=".fragments.MaleUsersFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/maleUsersRecyclerView"
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:textSize="24sp"
         android:layout_height="match_parent"
-        android:text="Fragment Cart" />
+        />
 
 </FrameLayout>

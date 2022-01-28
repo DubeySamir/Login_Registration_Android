@@ -1,10 +1,16 @@
 package com.sdcode.login_registration_ui.database;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.sdcode.login_registration_ui.models.ModelClassRVUser;
+
+import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -27,5 +33,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    public ArrayList<ModelClassRVUser> getAllMaleUsersData(String gender) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        ArrayList<ModelClassRVUser> objectModelClassList = new ArrayList<>();
+
+        Cursor cursor = database.rawQuery("select * from AllUsers where GENDER like '" + gender + "'", null);
+
+        if (cursor.getCount() != 0) {
+            cursor.moveToPosition(-1);
+
+            while (cursor.moveToNext()) {
+                Integer userId = cursor.getInt(0);
+                String genderLocal = cursor.getString(3);
+                String userEmail = cursor.getString(4);
+                String fName = cursor.getString(1);
+                String lName = cursor.getString(2);
+
+                objectModelClassList.add(new ModelClassRVUser(userId, genderLocal, userEmail,fName,lName));
+            }
+            return objectModelClassList;
+        } else {
+            Toast.makeText(context, "No values in database", Toast.LENGTH_SHORT).show();
+            return null;
+        }
     }
 }

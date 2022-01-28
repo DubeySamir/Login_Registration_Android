@@ -30,8 +30,8 @@ public class MainActivity extends BaseClass {
     }
 
     private void tabLayoutManager() {
-        tabLayout.addTab(tabLayout.newTab().setText("Home"));
-        tabLayout.addTab(tabLayout.newTab().setText("Cart"));
+        tabLayout.addTab(tabLayout.newTab().setText("Male Users"));
+        tabLayout.addTab(tabLayout.newTab().setText("Female Users"));
         tabLayout.addTab(tabLayout.newTab().setText("Account"));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
