@@ -2,6 +2,7 @@ package com.sdcode.login_registration_ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -14,16 +15,19 @@ import com.sdcode.login_registration_ui.fragments.MaleUsersFragment;
 
 public class BottomNavigationPage extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation_page);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Bottom Navigation");
 
-        getSupportFragmentManager().beginTransaction().add(R.id.frame,new MaleUsersFragment()).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.frame, new MaleUsersFragment()).commit();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
 
 
         bottomNavigationView.setSelectedItemId(R.id.menu_maleUsers);
@@ -31,15 +35,15 @@ public class BottomNavigationPage extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.menu_maleUsers:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frame,new MaleUsersFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().add(R.id.frame, new MaleUsersFragment()).commit();
                         return true;
                     case R.id.menu_femaleUsers:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frame,new FemaleUsersFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().add(R.id.frame, new FemaleUsersFragment()).commit();
                         return true;
                     case R.id.menu_account:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frame,new AccountFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().add(R.id.frame, new AccountFragment()).commit();
                         return true;
                 }
 
