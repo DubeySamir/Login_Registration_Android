@@ -52,9 +52,11 @@ public class UserRVAdapter extends RecyclerView.Adapter<UserRVAdapter.UsersRVVie
     public void onBindViewHolder(@NonNull UsersRVViewHolder holder, int position) {
 
         ModelClassRVUser modelClass = modelClassList.get(position);
-        holder.userName.setText(modelClass.getFName() + " " + modelClass.getLName());
+        holder.fName.setText(modelClass.getFName());
+        holder.lName.setText(modelClass.getLName());
         holder.userEmail.setText(modelClass.getEmail());
-//        Integer userId = modelClass.getUserId();
+        holder.phone.setText(modelClass.getPhone());
+
 
         if (modelClass.getGender().equals("Male")){
             holder.avatarImage.setImageDrawable(context.getResources().getDrawable(R.drawable.avatar_male));
@@ -75,14 +77,16 @@ public class UserRVAdapter extends RecyclerView.Adapter<UserRVAdapter.UsersRVVie
 
     public static class UsersRVViewHolder extends RecyclerView.ViewHolder{
         AppCompatImageView avatarImage;
-        TextView userName,userEmail;
+        TextView fName, lName, userEmail, phone;
 
 
         public UsersRVViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             avatarImage = itemView.findViewById(R.id.rvAvatar);
-            userName = itemView.findViewById(R.id.rvUserName);
+            fName = itemView.findViewById(R.id.rvFirstName);
+            lName = itemView.findViewById(R.id.rvLastName);
             userEmail = itemView.findViewById(R.id.rvEmail);
+            phone = itemView.findViewById(R.id.rvPhone);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {

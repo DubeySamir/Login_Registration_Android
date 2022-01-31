@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/drawable/button_radius.xml" value="0.1984375" />
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/drawable/ic_user.xml" value="0.1484375" />
+        <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/activity_bottom_navigation_page.xml" value="0.209375" />
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/activity_home_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/activity_main.xml" value="0.2" />
@@ -15,7 +16,9 @@
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/fragment_female_users.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/fragment_home.xml" value="0.22708333333333333" />
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/fragment_male_users.xml" value="0.16614583333333333" />
-        <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/list_item_user.xml" value="0.16614583333333333" />
+        <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/layout/list_item_user.xml" value="0.264" />
+        <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/menu/main_menu.xml" value="0.209375" />
         <entry key="..\:/Users/DR1000TU/AndroidStudioProjects/Login_Registration_UI/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1484375" />
       </map>
     </option>

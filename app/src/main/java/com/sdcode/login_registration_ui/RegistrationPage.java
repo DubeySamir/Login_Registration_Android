@@ -36,6 +36,7 @@ public class RegistrationPage extends BaseClass {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_page);
+        getSupportActionBar().setTitle("Registration");
 
         initUi();
         initData();

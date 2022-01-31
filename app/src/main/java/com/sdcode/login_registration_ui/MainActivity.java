@@ -1,7 +1,14 @@
 package com.sdcode.login_registration_ui;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -21,7 +28,7 @@ public class MainActivity extends BaseClass {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Home Page");
+        getSupportActionBar().setTitle("Home");
 
         initUi();
         initData();
@@ -73,5 +80,32 @@ public class MainActivity extends BaseClass {
         FragmentManager fm = getSupportFragmentManager();
         fragmentAdapter = new FragmentAdapter(fm,getLifecycle());
         viewPager.setAdapter(fragmentAdapter);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu ,menu);
+        return true;
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_bottom_navigation:
+                Intent i = new Intent(getApplicationContext(), BottomNavigationPage.class);
+                startActivity(i);
+                return true;
+            case R.id.menu_logout:
+                SharedPreferences pref = getApplicationContext().getSharedPreferences("LoginDetails",MODE_PRIVATE);
+                pref.edit().clear().apply();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

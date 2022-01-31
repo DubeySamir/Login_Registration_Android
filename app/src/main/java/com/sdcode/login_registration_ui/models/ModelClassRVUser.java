@@ -6,13 +6,15 @@ public class ModelClassRVUser {
     private String email;
     private String fName;
     private String lName;
+    private String phone;
 
-    public ModelClassRVUser(Integer userId, String gender, String email, String fName, String lName) {
+    public ModelClassRVUser(Integer userId, String gender, String email, String fName, String lName, String phone) {
         this.gender = gender;
         this.email = email;
         this.userId = userId;
         this.fName = fName;
         this.lName = lName;
+        this.phone = phone;
     }
 
     public String getGender() {
@@ -33,5 +35,9 @@ public class ModelClassRVUser {
 
     public Integer getUserId() {
         return userId;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 }

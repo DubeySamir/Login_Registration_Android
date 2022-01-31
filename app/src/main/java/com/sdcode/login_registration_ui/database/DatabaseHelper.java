@@ -20,7 +20,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, myDb, null, version);
-
         this.context = context;
     }
 
@@ -51,8 +50,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 String userEmail = cursor.getString(4);
                 String fName = cursor.getString(1);
                 String lName = cursor.getString(2);
+                String phone = cursor.getString(5);
 
-                objectModelClassList.add(new ModelClassRVUser(userId, genderLocal, userEmail,fName,lName));
+                objectModelClassList.add(new ModelClassRVUser(userId, genderLocal, userEmail,fName,lName, phone));
             }
             return objectModelClassList;
         } else {

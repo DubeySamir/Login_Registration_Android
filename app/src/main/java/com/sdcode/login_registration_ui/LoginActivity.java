@@ -23,6 +23,7 @@ public class LoginActivity extends BaseClass {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().setTitle("Login");
 
         initUi();
         initData();
