@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
     android:layout_marginTop="8dp"
-    android:padding="5dp"
-    android:background="@drawable/button_radius">
+    android:background="@drawable/button_radius"
+    android:padding="5dp">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/rvAvatar"
@@ -28,6 +28,7 @@
             android:layout_marginTop="3dp"
             android:text="First Name"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,6 +51,7 @@
             android:layout_marginTop="3dp"
             android:text="Last Name"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
 
@@ -58,9 +60,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="3dp"
             android:text="Dubey"
             android:textSize="24sp"
-            android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toBottomOf="@+id/rvFirstName" />
 
@@ -69,11 +71,12 @@
             android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
             android:layout_gravity="center"
+            android:layout_marginTop="3dp"
             android:layout_weight="1"
             android:text="Email"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
 
@@ -94,11 +97,12 @@
             android:id="@+id/tvPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
             android:layout_gravity="center"
+            android:layout_marginTop="3dp"
             android:layout_weight="1"
             android:text="Phone"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 

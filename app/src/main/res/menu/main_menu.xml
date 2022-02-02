@@ -7,6 +7,9 @@
         android:title="Bottom Navigation" />
 
     <item
+        android:id="@+id/menu_navigation_drawer"
+        android:title="Navigation Drawer" />
+    <item
         android:id="@+id/menu_logout"
         android:title="Logout"/>
 

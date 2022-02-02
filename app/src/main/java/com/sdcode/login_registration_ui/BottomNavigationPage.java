@@ -26,11 +26,9 @@ public class BottomNavigationPage extends AppCompatActivity {
         getSupportActionBar().setTitle("Bottom Navigation");
 
         getSupportFragmentManager().beginTransaction().add(R.id.frame, new MaleUsersFragment()).commit();
-
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-
         bottomNavigationView.setSelectedItemId(R.id.menu_maleUsers);
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

@@ -102,6 +102,10 @@ public class MainActivity extends BaseClass {
                 Intent i = new Intent(getApplicationContext(), BottomNavigationPage.class);
                 startActivity(i);
                 return true;
+            case R.id.menu_navigation_drawer:
+                Intent intent = new Intent(getApplicationContext(), NavigationDrawer.class);
+                startActivity(intent);
+                return true;
             case R.id.menu_logout:
                 SharedPreferences pref = getApplicationContext().getSharedPreferences("LoginDetails",MODE_PRIVATE);
                 pref.edit().clear().apply();
